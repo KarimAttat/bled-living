@@ -15,6 +15,23 @@ import { LanguageProvider } from './context/LanguageContext'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './styles/components.css'
+import { FaWhatsapp } from 'react-icons/fa6'
+
+function FloatingWhatsApp() {
+  return (
+    <a 
+      href="https://wa.me/393402778699" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="floating-wa hover-lift"
+    >
+      <div className="floating-wa-text">Serve aiuto? Scrivici!</div>
+      <div className="floating-wa-icon">
+        <FaWhatsapp size={28} />
+      </div>
+    </a>
+  )
+}
 
 function HomePage() {
   useEffect(() => {
@@ -54,6 +71,7 @@ function App() {
           <Route path="/blog"      element={<BlogList />} />
           <Route path="/blog/:id"  element={<BlogPost />} />
         </Routes>
+        <FloatingWhatsApp />
       </BrowserRouter>
     </LanguageProvider>
   )

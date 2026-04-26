@@ -53,8 +53,77 @@
 
 @media (max-width: 576px) {
   .btn-sm {
-    padding: 0.4rem 0.8rem;
+    padding: 0.35rem 0.65rem;
     font-size: 0.75rem;
+  }
+}
+
+.footer-form-card input::placeholder,
+.footer-form-card textarea::placeholder {
+  color: rgba(255, 255, 255, 0.75) !important;
+  opacity: 1; /* Firefox sets opacity: 0.5 by default */
+}
+
+/* Floating WhatsApp Widget */
+.floating-wa {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+  text-decoration: none;
+}
+
+.floating-wa-text {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.floating-wa:hover .floating-wa-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.floating-wa-icon {
+  background-color: #25D366;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(37,211,102,0.4);
+  transition: transform 0.3s ease;
+}
+
+.floating-wa:hover .floating-wa-icon {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .floating-wa {
+    bottom: 20px;
+    right: 20px;
+  }
+  .floating-wa-text {
+    display: none;
+  }
+  .floating-wa-icon {
+    width: 50px;
+    height: 50px;
   }
 }
 

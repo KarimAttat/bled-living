@@ -188,10 +188,20 @@ export default function Footer() {
                 {t('footer', 'whatsappBtn')}
               </a>
 
-              {/* Divider */}
-              <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', marginTop: '2.5rem', paddingTop: '2rem' }}>
-                <p style={{ opacity: 0.6, fontSize: '0.875rem', marginBottom: '0.5rem' }}>Email diretta:</p>
-                <a href="mailto:info@bledliving.com" style={{ color: 'var(--color-terracotta)', textDecoration: 'none', fontSize: '1rem', fontWeight: '500' }}>info@bledliving.com</a>
+              {/* Divider for Contacts */}
+              <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', width: '100%', marginTop: '2.5rem', paddingTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                <div>
+                  <p style={{ opacity: 0.6, fontSize: '0.85rem', marginBottom: '0.2rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email</p>
+                  <a href="mailto:info@bledliving.com" style={{ color: 'var(--color-terracotta)', textDecoration: 'none', fontSize: '1.05rem', fontWeight: '500' }}>info@bledliving.com</a>
+                </div>
+                <div>
+                  <p style={{ opacity: 0.6, fontSize: '0.85rem', marginBottom: '0.2rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Telefono / WhatsApp</p>
+                  <a href="tel:+393402778699" style={{ color: 'var(--color-white)', textDecoration: 'none', fontSize: '1.05rem', fontWeight: '500' }}>+39 340 277 8699</a>
+                </div>
+                <div>
+                  <p style={{ opacity: 0.6, fontSize: '0.85rem', marginBottom: '0.2rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Sede</p>
+                  <p style={{ color: 'var(--color-white)', fontSize: '1rem', margin: 0 }}>Guéliz, Marrakech, Morocco</p>
+                </div>
               </div>
             </div>
           </div>

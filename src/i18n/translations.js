@@ -139,7 +139,7 @@ export const translations = {
       formError: "Errore nell'invio. Riprova o scrivici direttamente.",
       whatsappTitle: "Preferisci il contatto diretto?",
       whatsappDesc: "Scrivici su WhatsApp per una risposta immediata. Siamo disponibili tutti i giorni.",
-      whatsappBtn: "Apri WhatsApp"
+      whatsappBtn: "Scrivici su WhatsApp"
     }
   },
   en: {
