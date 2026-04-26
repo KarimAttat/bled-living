@@ -2,17 +2,17 @@
 // Per aggiungere un nuovo articolo, aggiungi un oggetto a questo array.
 export const posts = [
   {
-    id: 'perche-investire-marocco-2025',
-    date: '2025-04-20',
+    id: 'perche-investire-marocco-2026',
+    date: '2026-04-20',
     category: 'Investimenti',
     categoryColor: '#2C3E35',
     readTime: '5 min',
-    titleIt: 'Perché il 2025 è il momento giusto per investire in Marocco',
-    titleEn: 'Why 2025 is the right time to invest in Morocco',
+    titleIt: 'Perché il 2026 è il momento giusto per investire in Marocco',
+    titleEn: 'Why 2026 is the right time to invest in Morocco',
     excerptIt: 'Il mercato immobiliare marocchino è in forte espansione: turismo record, Mondiali 2030 all\'orizzonte e prezzi ancora accessibili. Ecco perché questo è il momento ideale per entrare.',
     excerptEn: 'Morocco\'s real estate market is booming: record tourism, the 2030 World Cup on the horizon and still-accessible prices. Here\'s why now is the ideal time to enter.',
     contentIt: `
-Il mercato immobiliare marocchino sta vivendo un momento di trasformazione storica. Tre fattori convergono per rendere il 2025 un anno eccezionale per chi vuole investire:
+Il mercato immobiliare marocchino sta vivendo un momento di trasformazione storica. Tre fattori convergono per rendere il 2026 un anno eccezionale per chi vuole investire:
 
 **1. L'effetto Mondiale 2030**
 Il Marocco co-ospiterà i Mondiali di Calcio nel 2030 insieme a Spagna e Portogallo. Questo significa investimenti infrastrutturali massicci, nuovi stadi, hotel, trasporti e un'attenzione mediatica globale sul paese che durerà per anni.
@@ -27,7 +27,7 @@ Rispetto a destinazioni simili come il Portogallo o la Grecia, i prezzi degli im
 Il mercato marocchino non è trasparente come quello europeo: servono contatti locali affidabili, conoscenza delle procedure legali e un partner di fiducia sul campo. È esattamente quello che offriamo con Bled Living.
     `,
     contentEn: `
-Morocco's real estate market is experiencing a moment of historic transformation. Three factors converge to make 2025 an exceptional year for investors:
+Morocco's real estate market is experiencing a moment of historic transformation. Three factors converge to make 2026 an exceptional year for investors:
 
 **1. The 2030 World Cup Effect**
 Morocco will co-host the 2030 Football World Cup alongside Spain and Portugal. This means massive infrastructure investments, new stadiums, hotels, transport upgrades, and global media attention that will last for years.
@@ -46,7 +46,7 @@ The Moroccan market is not as transparent as the European one: you need reliable
   },
   {
     id: 'riad-marrakech-guida-acquisto',
-    date: '2025-04-10',
+    date: '2026-04-10',
     category: 'Guide',
     categoryColor: '#B08E66',
     readTime: '7 min',
@@ -102,12 +102,12 @@ European citizens can freely purchase property in Morocco as non-residents, with
 **Our advice**
 Never proceed without a trusted local lawyer and without verifying the property's complete history. At Bled Living, we guide you through every step of the process.
     `,
-    image: '/real_marrakech.jpg',
+    image: '/hero_jemaa.jpg',
     imageAlt: 'Riad tradizionale nella Medina di Marrakech',
   },
   {
     id: 'agadir-turismo-investimento',
-    date: '2025-03-28',
+    date: '2026-03-28',
     category: 'Destinazioni',
     categoryColor: '#4A7C6E',
     readTime: '4 min',

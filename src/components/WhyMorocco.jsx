@@ -2,15 +2,16 @@ import React, { useState, useEffect } from 'react'
 import { useLanguage } from '../context/LanguageContext'
 import { FaChartLine, FaUsers, FaShieldHalved, FaCity, FaPalette, FaLocationDot, FaCoins } from 'react-icons/fa6'
 
-const SLIDES = [
-  { src: '/real_casablanca.jpg',  caption: 'Casablanca Finance City' },
-  { src: '/real_marrakech.jpg',   caption: 'Marrakech — La Città Rosa' },
-  { src: '/real_agadir.jpg',      caption: 'Agadir — Costa Atlantica' },
-  { src: '/real_rabat.jpg',       caption: 'Rabat — La Capitale' },
-  { src: '/real_train.jpg',       caption: 'Al Boraq — Alta Velocità' },
-]
 
 function WhySlider() {
+  const { language } = useLanguage()
+  const SLIDES = [
+    { src: '/real_casablanca.jpg',  caption: 'Casablanca Finance City' },
+    { src: '/why_morocco_arch.jpg', caption: language === 'it' ? 'Marrakech — La Città Rossa' : 'Marrakech — The Red City' },
+    { src: '/real_agadir.jpg',      caption: 'Agadir — Costa Atlantica' },
+    { src: '/real_rabat.jpg',       caption: 'Rabat — La Capitale' },
+    { src: '/real_train.jpg',       caption: 'Al Boraq — Alta Velocità' },
+  ]
   const [current, setCurrent] = useState(0)
   const [prev, setPrev] = useState(null)
 

@@ -11,7 +11,7 @@ export default function About() {
         <div className="about-grid" data-aos="fade-up">
           <div className="about-img-container">
             <img 
-              src="/hero_marrakech.png" 
+              src="/real_riad_wikipedia.jpg" 
               alt="Fondatori di Bled Living - Esperti in investimenti immobiliari e viaggi in Marocco" 
               className="about-img"
             />

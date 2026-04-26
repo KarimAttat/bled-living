@@ -62,7 +62,7 @@ export default function TailoredTrips() {
         </div>
         <div className="about-img-container" data-aos="fade-up" data-aos-delay="200">
           <img 
-            src="/tailored_trips.png" 
+            src="/tailored_trips_majorelle.jpg" 
             alt="Viaggi su misura a Marrakech e scouting per investimenti immobiliari in Marocco" 
             className="about-img"
           />
