@@ -137,8 +137,8 @@ export const translations = {
       formSending: "Invio in corso...",
       formSuccess: "Il messaggio è stato inviato correttamente. Verrai ricontattato al più presto.",
       formError: "Errore nell'invio. Riprova o scrivici direttamente.",
-      whatsappTitle: "Preferisci il contatto diretto?",
-      whatsappDesc: "Scrivici su WhatsApp per una risposta immediata. Siamo disponibili tutti i giorni.",
+      whatsappTitle: "Preferisci un contatto diretto?",
+      whatsappDesc: "Scrivici su WhatsApp per una risposta immediata.",
       whatsappBtn: "Scrivici su WhatsApp"
     }
   },
@@ -281,7 +281,7 @@ export const translations = {
       formSuccess: "The message has been sent successfully. You will be contacted as soon as possible.",
       formError: "Sending error. Please retry or contact us directly.",
       whatsappTitle: "Prefer direct contact?",
-      whatsappDesc: "Message us on WhatsApp for an immediate reply. We're available every day.",
+      whatsappDesc: "Message us on WhatsApp for an immediate reply.",
       whatsappBtn: "Message us on WhatsApp"
     }
   }
