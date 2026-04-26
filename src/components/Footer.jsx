@@ -10,6 +10,9 @@ export default function Footer() {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
+    if (status !== 'idle' && status !== 'sending') {
+      setStatus('idle')
+    }
   }
 
   const handleSubmit = async (e) => {
@@ -69,104 +72,104 @@ export default function Footer() {
           <div className="footer-form-card">
             <h3 style={{ color: 'var(--color-terracotta)', marginBottom: '1.75rem', fontSize: '1.25rem', fontWeight: '600' }}>{t('footer', 'formTitle')}</h3>
 
-            {status === 'success' ? (
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', minHeight: '280px', textAlign: 'center' }}>
-                <FaCircleCheck style={{ fontSize: '3rem', color: 'var(--color-terracotta)' }} />
-                <p style={{ fontSize: '1.1rem', opacity: 0.95 }}>{t('footer', 'formSuccess')}</p>
+            {status === 'success' && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', backgroundColor: 'rgba(37, 211, 102, 0.1)', border: '1px solid rgba(37, 211, 102, 0.3)', padding: '1rem', borderRadius: '8px', marginBottom: '1.5rem' }}>
+                <FaCircleCheck style={{ fontSize: '1.5rem', color: '#25D366', flexShrink: 0 }} />
+                <p style={{ margin: 0, fontSize: '0.95rem', color: '#fff' }}>{t('footer', 'formSuccess')}</p>
               </div>
-            ) : (
-              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                {/* Row 1: Name + Email */}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>{t('footer', 'formName')}</label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder={t('footer', 'formName')}
-                      required
-                      style={{...inputStyle, backgroundColor: 'rgba(255,255,255,0.12)'}}
-                    />
-                  </div>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>Email</label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="email@esempio.com"
-                      required
-                      style={{...inputStyle, backgroundColor: 'rgba(255,255,255,0.12)'}}
-                    />
-                  </div>
-                </div>
+            )}
 
-                {/* Row 2: Phone + Interest */}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>{t('footer', 'formPhone')}</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="+39..."
-                      style={{...inputStyle, backgroundColor: 'rgba(255,255,255,0.12)'}}
-                    />
-                  </div>
-                  <div>
-                    <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>{t('footer', 'formInterest')}</label>
-                    <select
-                      name="interest"
-                      value={formData.interest}
-                      onChange={handleChange}
-                      required
-                      style={{ ...inputStyle, cursor: 'pointer', backgroundColor: 'rgba(255,255,255,0.12)' }}
-                    >
-                      <option value="" disabled style={{ color: '#333' }}>{t('footer', 'formInterestDefault')}</option>
-                      <option value="Investimento Immobiliare" style={{ color: '#333' }}>{t('footer', 'formInterest1')}</option>
-                      <option value="Viaggio su Misura" style={{ color: '#333' }}>{t('footer', 'formInterest2')}</option>
-                      <option value="Consulenza Business" style={{ color: '#333' }}>{t('footer', 'formInterest3')}</option>
-                      <option value="Relocation" style={{ color: '#333' }}>{t('footer', 'formInterest4')}</option>
-                      <option value="Altro" style={{ color: '#333' }}>{t('footer', 'formInterest5')}</option>
-                    </select>
-                  </div>
-                </div>
-
-                {/* Row 3: Message */}
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {/* Row 1: Name + Email */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>Messaggio</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
+                  <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>{t('footer', 'formName')}</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
                     onChange={handleChange}
-                    placeholder={t('footer', 'formMessage')}
+                    placeholder={t('footer', 'formName')}
                     required
-                    rows={4}
-                    style={{ ...inputStyle, resize: 'vertical', lineHeight: '1.6', backgroundColor: 'rgba(255,255,255,0.12)' }}
+                    style={{...inputStyle, backgroundColor: 'rgba(255,255,255,0.12)'}}
                   />
                 </div>
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="email@esempio.com"
+                    required
+                    style={{...inputStyle, backgroundColor: 'rgba(255,255,255,0.12)'}}
+                  />
+                </div>
+              </div>
 
-                {status === 'error' && (
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ffb3b3', fontSize: '0.9rem' }}>
-                    <FaTriangleExclamation />
-                    <span>{t('footer', 'formError')}</span>
-                  </div>
-                )}
+              {/* Row 2: Phone + Interest */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>{t('footer', 'formPhone')}</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="+39..."
+                    style={{...inputStyle, backgroundColor: 'rgba(255,255,255,0.12)'}}
+                  />
+                </div>
+                <div>
+                  <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>{t('footer', 'formInterest')}</label>
+                  <select
+                    name="interest"
+                    value={formData.interest}
+                    onChange={handleChange}
+                    required
+                    style={{ ...inputStyle, cursor: 'pointer', backgroundColor: 'rgba(255,255,255,0.12)' }}
+                  >
+                    <option value="" disabled style={{ color: '#333' }}>{t('footer', 'formInterestDefault')}</option>
+                    <option value="Investimento Immobiliare" style={{ color: '#333' }}>{t('footer', 'formInterest1')}</option>
+                    <option value="Viaggio su Misura" style={{ color: '#333' }}>{t('footer', 'formInterest2')}</option>
+                    <option value="Consulenza Business" style={{ color: '#333' }}>{t('footer', 'formInterest3')}</option>
+                    <option value="Relocation" style={{ color: '#333' }}>{t('footer', 'formInterest4')}</option>
+                    <option value="Altro" style={{ color: '#333' }}>{t('footer', 'formInterest5')}</option>
+                  </select>
+                </div>
+              </div>
 
-                <button
-                  type="submit"
-                  disabled={status === 'sending'}
-                  className="btn btn-primary"
-                  style={{ width: '100%', justifyContent: 'center', marginTop: '0.25rem', opacity: status === 'sending' ? 0.7 : 1, cursor: status === 'sending' ? 'wait' : 'pointer' }}
-                >
-                  {status === 'sending' ? t('footer', 'formSending') : t('footer', 'formSubmit')}
-                </button>
-              </form>
-            )}
+              {/* Row 3: Message */}
+              <div>
+                <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>Messaggio</label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder={t('footer', 'formMessage')}
+                  required
+                  rows={4}
+                  style={{ ...inputStyle, resize: 'vertical', lineHeight: '1.6', backgroundColor: 'rgba(255,255,255,0.12)' }}
+                />
+              </div>
+
+              {status === 'error' && (
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ffb3b3', fontSize: '0.9rem' }}>
+                  <FaTriangleExclamation />
+                  <span>{t('footer', 'formError')}</span>
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={status === 'sending'}
+                className="btn btn-primary"
+                style={{ width: '100%', justifyContent: 'center', marginTop: '0.25rem', opacity: status === 'sending' ? 0.7 : 1, cursor: status === 'sending' ? 'wait' : 'pointer' }}
+              >
+                {status === 'sending' ? t('footer', 'formSending') : t('footer', 'formSubmit')}
+              </button>
+            </form>
           </div>
 
           {/* --- WhatsApp Alternative --- */}
