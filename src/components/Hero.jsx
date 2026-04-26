@@ -19,7 +19,7 @@ export default function Hero() {
         </div>
         <div className="hero-image-wrapper" data-aos="zoom-in" data-aos-delay="200">
           <img 
-            src="/hero_marrakech.png" 
+            src="/real_marrakech.jpg" 
             alt="Marrakech luxury real estate" 
             className="hero-image"
           />
