@@ -10,7 +10,7 @@ export const translations = {
       opportunities: "Opportunità",
       about: "Chi Siamo",
       faq: "FAQ",
-      consultation: "Consulenza Gratuita"
+      consultation: "Parla con noi"
     },
     hero: {
       title: "Il tuo ponte per investire in Marocco.",
@@ -153,13 +153,13 @@ export const translations = {
       opportunities: "Opportunities",
       about: "About Us",
       faq: "FAQ",
-      consultation: "Free Consultation"
+      consultation: "Let's Talk"
     },
     hero: {
       title: "Your bridge to investing in Morocco.",
       subtitle: "Real estate opportunities, exploratory trips, and strategic consulting. We guide you with local expertise and European elegance.",
       btnConsultation: "Book a Consultation",
-      btnWhatsapp: "WhatsApp"
+      btnWhatsapp: "Message us on WhatsApp"
     },
     whyMorocco: {
       title: "Why invest in Morocco today?",
@@ -282,7 +282,7 @@ export const translations = {
       formError: "Sending error. Please retry or contact us directly.",
       whatsappTitle: "Prefer direct contact?",
       whatsappDesc: "Message us on WhatsApp for an immediate reply. We're available every day.",
-      whatsappBtn: "Open WhatsApp"
+      whatsappBtn: "Message us on WhatsApp"
     }
   }
 };

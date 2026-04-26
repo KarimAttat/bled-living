@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaInstagram, FaFacebookF, FaTiktok, FaXTwitter, FaWhatsapp, FaCircleCheck, FaTriangleExclamation } from 'react-icons/fa6'
+import { FaInstagram, FaFacebookF, FaTiktok, FaXTwitter, FaWhatsapp, FaCircleCheck, FaTriangleExclamation, FaEnvelope, FaPhone, FaLocationDot } from 'react-icons/fa6'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function Footer() {
@@ -191,21 +191,7 @@ export default function Footer() {
                 {t('footer', 'whatsappBtn')}
               </a>
 
-              {/* Divider for Contacts */}
-              <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', width: '100%', marginTop: '2.5rem', paddingTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <div>
-                  <p style={{ opacity: 0.6, fontSize: '0.85rem', marginBottom: '0.2rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email</p>
-                  <a href="mailto:info@bledliving.com" style={{ color: 'var(--color-terracotta)', textDecoration: 'none', fontSize: '1.05rem', fontWeight: '500' }}>info@bledliving.com</a>
-                </div>
-                <div>
-                  <p style={{ opacity: 0.6, fontSize: '0.85rem', marginBottom: '0.2rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Telefono / WhatsApp</p>
-                  <a href="tel:+393402778699" style={{ color: 'var(--color-white)', textDecoration: 'none', fontSize: '1.05rem', fontWeight: '500' }}>+39 340 277 8699</a>
-                </div>
-                <div>
-                  <p style={{ opacity: 0.6, fontSize: '0.85rem', marginBottom: '0.2rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Sede</p>
-                  <p style={{ color: 'var(--color-white)', fontSize: '1rem', margin: 0 }}>Guéliz, Marrakech, Morocco</p>
-                </div>
-              </div>
+              {/* Divider for Contacts removed as requested */}
             </div>
           </div>
         </div>
@@ -217,6 +203,18 @@ export default function Footer() {
             <a href="/#chi-siamo" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>{t('footer', 'about')}</a>
             <a href="/#risorse" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>{t('footer', 'resources')}</a>
             <Link to="/blog" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>Blog</Link>
+          </div>
+
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)' }}>
+            <a href="mailto:info@bledliving.com" style={{ color: 'inherit', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.4rem', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.6)'}>
+              <FaEnvelope /> info@bledliving.com
+            </a>
+            <a href="tel:+393402778699" style={{ color: 'inherit', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.4rem', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.6)'}>
+              <FaPhone /> +39 340 277 8699
+            </a>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <FaLocationDot /> Guéliz, Marrakech
+            </span>
           </div>
 
           <div style={{ display: 'flex', gap: '1.25rem', fontSize: '1.2rem' }}>
