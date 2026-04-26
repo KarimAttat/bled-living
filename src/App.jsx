@@ -11,7 +11,7 @@ import BlogTeaser from './components/BlogTeaser'
 import Footer from './components/Footer'
 import SEO from './components/SEO'
 import { BlogList, BlogPost } from './components/Blog'
-import { LanguageProvider } from './context/LanguageContext'
+import { LanguageProvider, useLanguage } from './context/LanguageContext'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './styles/components.css'
@@ -30,6 +30,17 @@ function FloatingWhatsApp() {
         <FaWhatsapp size={28} />
       </div>
     </a>
+  )
+}
+
+function FloatingLanguageSelector() {
+  const { language, setLanguage } = useLanguage()
+  return (
+    <div className="floating-lang">
+      <button className={language === 'it' ? 'active' : ''} onClick={() => setLanguage('it')}>IT</button>
+      <div className="floating-lang-divider"></div>
+      <button className={language === 'en' ? 'active' : ''} onClick={() => setLanguage('en')}>EN</button>
+    </div>
   )
 }
 
@@ -72,6 +83,7 @@ function App() {
           <Route path="/blog/:id"  element={<BlogPost />} />
         </Routes>
         <FloatingWhatsApp />
+        <FloatingLanguageSelector />
       </BrowserRouter>
     </LanguageProvider>
   )
