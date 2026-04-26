@@ -51,6 +51,13 @@
   font-size: 0.875rem;
 }
 
+@media (max-width: 576px) {
+  .btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
 /* Hero Section - Split Layout */
 .hero {
   position: relative;

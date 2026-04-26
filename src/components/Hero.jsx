@@ -12,7 +12,7 @@ export default function Hero() {
           <p className="hero-subtitle">{t('hero', 'subtitle')}</p>
           <div className="hero-actions">
             <a href="#contatti" className="btn btn-primary">{t('hero', 'btnConsultation')}</a>
-            <a href="https://wa.me/393931989918" className="btn btn-outline-dark" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <a href="https://wa.me/393402778699" className="btn btn-outline-dark" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <FaWhatsapp size={22} /> {t('hero', 'btnWhatsapp')}
             </a>
           </div>

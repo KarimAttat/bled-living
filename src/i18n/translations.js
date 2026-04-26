@@ -16,7 +16,7 @@ export const translations = {
       title: "Il tuo ponte per investire in Marocco.",
       subtitle: "Opportunità immobiliari, viaggi esplorativi e consulenza strategica. Ti guidiamo con competenza locale ed eleganza europea.",
       btnConsultation: "Prenota una consulenza",
-      btnWhatsapp: "WhatsApp"
+      btnWhatsapp: "Scrivici su WhatsApp"
     },
     whyMorocco: {
       title: "Perché investire in Marocco oggi?",

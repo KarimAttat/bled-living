@@ -79,7 +79,7 @@ export default function Footer() {
                 {/* Row 1: Name + Email */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', opacity: 0.7, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{t('footer', 'formName')}</label>
+                    <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>{t('footer', 'formName')}</label>
                     <input
                       type="text"
                       name="name"
@@ -87,11 +87,11 @@ export default function Footer() {
                       onChange={handleChange}
                       placeholder={t('footer', 'formName')}
                       required
-                      style={inputStyle}
+                      style={{...inputStyle, backgroundColor: 'rgba(255,255,255,0.12)'}}
                     />
                   </div>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', opacity: 0.7, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email</label>
+                    <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>Email</label>
                     <input
                       type="email"
                       name="email"
@@ -99,7 +99,7 @@ export default function Footer() {
                       onChange={handleChange}
                       placeholder="email@esempio.com"
                       required
-                      style={inputStyle}
+                      style={{...inputStyle, backgroundColor: 'rgba(255,255,255,0.12)'}}
                     />
                   </div>
                 </div>
@@ -107,24 +107,24 @@ export default function Footer() {
                 {/* Row 2: Phone + Interest */}
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', opacity: 0.7, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{t('footer', 'formPhone')}</label>
+                    <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>{t('footer', 'formPhone')}</label>
                     <input
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+39..."
-                      style={inputStyle}
+                      style={{...inputStyle, backgroundColor: 'rgba(255,255,255,0.12)'}}
                     />
                   </div>
                   <div>
-                    <label style={{ display: 'block', fontSize: '0.8rem', opacity: 0.7, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{t('footer', 'formInterest')}</label>
+                    <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>{t('footer', 'formInterest')}</label>
                     <select
                       name="interest"
                       value={formData.interest}
                       onChange={handleChange}
                       required
-                      style={{ ...inputStyle, cursor: 'pointer' }}
+                      style={{ ...inputStyle, cursor: 'pointer', backgroundColor: 'rgba(255,255,255,0.12)' }}
                     >
                       <option value="" disabled style={{ color: '#333' }}>{t('footer', 'formInterestDefault')}</option>
                       <option value="Investimento Immobiliare" style={{ color: '#333' }}>{t('footer', 'formInterest1')}</option>
@@ -138,7 +138,7 @@ export default function Footer() {
 
                 {/* Row 3: Message */}
                 <div>
-                  <label style={{ display: 'block', fontSize: '0.8rem', opacity: 0.7, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Messaggio</label>
+                  <label style={{ display: 'block', fontSize: '0.9rem', opacity: 1, marginBottom: '0.4rem', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: '500' }}>Messaggio</label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -146,7 +146,7 @@ export default function Footer() {
                     placeholder={t('footer', 'formMessage')}
                     required
                     rows={4}
-                    style={{ ...inputStyle, resize: 'vertical', lineHeight: '1.6' }}
+                    style={{ ...inputStyle, resize: 'vertical', lineHeight: '1.6', backgroundColor: 'rgba(255,255,255,0.12)' }}
                   />
                 </div>
 
@@ -178,11 +178,11 @@ export default function Footer() {
               <h3 style={{ color: 'var(--color-white)', fontSize: '1.4rem', marginBottom: '1rem', fontWeight: '600' }}>{t('footer', 'whatsappTitle')}</h3>
               <p style={{ opacity: 0.8, lineHeight: '1.7', marginBottom: '2rem', fontSize: '1rem' }}>{t('footer', 'whatsappDesc')}</p>
               <a
-                href="https://wa.me/393931989918"
+                href="https://wa.me/393402778699"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn"
-                style={{ backgroundColor: '#25D366', color: '#fff', border: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '0.9rem 2rem', fontSize: '1rem', boxShadow: '0 6px 20px rgba(37,211,102,0.3)', width: '100%', justifyContent: 'center' }}
+                className="btn btn-outline-light hover-lift"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', width: '100%', justifyContent: 'center' }}
               >
                 <FaWhatsapp size={20} />
                 {t('footer', 'whatsappBtn')}
@@ -200,13 +200,14 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', marginTop: '4rem', padding: '2rem 0', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem' }}>
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', fontSize: '0.875rem' }}>
+            <Link to="/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>Home</Link>
             <a href="/#chi-siamo" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>{t('footer', 'about')}</a>
             <a href="/#risorse" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>{t('footer', 'resources')}</a>
             <Link to="/blog" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>Blog</Link>
           </div>
 
           <div style={{ display: 'flex', gap: '1.25rem', fontSize: '1.2rem' }}>
-            <a href="https://instagram.com/bladeliving" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.55)', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.55)'}><FaInstagram /></a>
+            <a href="https://instagram.com/bledliving" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.55)', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.55)'}><FaInstagram /></a>
             <a href="https://facebook.com/bledliving" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.55)', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.55)'}><FaFacebookF /></a>
             <a href="#" style={{ color: 'rgba(255,255,255,0.55)', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.55)'}><FaTiktok /></a>
             <a href="#" style={{ color: 'rgba(255,255,255,0.55)', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.55)'}><FaXTwitter /></a>
