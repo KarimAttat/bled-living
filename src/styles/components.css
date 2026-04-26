@@ -697,7 +697,7 @@
   background-color: var(--color-white);
   border-radius: 10px;
   border: 1.5px solid rgba(44, 62, 53, 0.08);
-  padding: 1.25rem 1.5rem;
+  padding: 0.85rem 1.25rem;
   cursor: pointer;
   transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   user-select: none;

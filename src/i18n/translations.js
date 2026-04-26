@@ -20,7 +20,7 @@ export const translations = {
     },
     whyMorocco: {
       title: "Perché investire in Marocco oggi?",
-      subtitle: "Il Marocco non è più solo una destinazione esotica, ma un hub di investimento strategico con rendimenti straordinari. Ecco perché gli investitori intelligenti guardano a Marrakech.",
+      subtitle: "Il Marocco non è più solo una destinazione esotica, ma un hub di investimento strategico con rendimenti straordinari. Ecco perché gli investitori intelligenti guardano al Marocco.",
       listTitle: "I Fondamentali del Mercato",
       point1Title: "Crescita del Turismo",
       point1Desc: "Record storici di affluenza, con previsioni in forte rialzo verso i Mondiali 2030.",
@@ -89,7 +89,7 @@ export const translations = {
     about: {
       title1: "Due culture, una sola missione:",
       title2: "il tuo successo.",
-      p1: "Siamo due ragazzi nati in Marocco ma cresciuti in Europa. Conosciamo l'esigenza di chiarezza e sicurezza degli investitori italiani, ma possediamo la rete di contatti locali indispensabile per muoversi con successo a Marrakech.",
+      p1: "Siamo due ragazzi nati in Marocco ma cresciuti in Europa. Conosciamo l'esigenza di chiarezza e sicurezza degli investitori italiani, ma possediamo la rete di contatti locali indispensabile per muoversi con successo in Marocco.",
       p2: "Con Bled Living, abbiamo creato quello che noi stessi cercavamo: un partner di cui fidarsi ciecamente, capace di unire l'affidabilità europea all'anima vibrante del Marocco.",
       p3: "Parliamo italiano, pensiamo europeo, agiamo locale."
     },
@@ -163,7 +163,7 @@ export const translations = {
     },
     whyMorocco: {
       title: "Why invest in Morocco today?",
-      subtitle: "Morocco is no longer just an exotic destination, but a strategic investment hub with extraordinary yields. Here's why smart investors look to Marrakech.",
+      subtitle: "Morocco is no longer just an exotic destination, but a strategic investment hub with extraordinary yields. Here's why smart investors look to Morocco.",
       listTitle: "Market Fundamentals",
       point1Title: "Tourism Growth",
       point1Desc: "Historical attendance records, with strong upward forecasts towards the 2030 World Cup.",
@@ -232,7 +232,7 @@ export const translations = {
     about: {
       title1: "Two cultures, one mission:",
       title2: "your success.",
-      p1: "We are two young guys born in Morocco but raised in Europe. We know the need for clarity and security of international investors, but we possess the network of local contacts essential for successfully navigating Marrakech.",
+      p1: "We are two young guys born in Morocco but raised in Europe. We know the need for clarity and security of international investors, but we possess the network of local contacts essential for successfully navigating Morocco.",
       p2: "With Bled Living, we created what we ourselves were looking for: a partner you can blindly trust, capable of combining European reliability with the vibrant soul of Morocco.",
       p3: "We think European, we act local."
     },
