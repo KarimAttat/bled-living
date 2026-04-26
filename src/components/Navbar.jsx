@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="container nav-container">
         <div className="logo">
           <Link to="/">
-            <img src="/logo.png" alt="Bled Living Logo - Investimenti e Viaggi in Marocco" className="navbar-logo" />
+            <img src="/logo.png?v=2" alt="Bled Living Logo - Investimenti e Viaggi in Marocco" className="navbar-logo" />
           </Link>
         </div>
         <div className="nav-cta" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
