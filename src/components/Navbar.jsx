@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useLanguage } from '../context/LanguageContext'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -17,9 +18,9 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <div className="logo">
-          <a href="#">
+          <Link to="/">
             <img src="/logo.png" alt="Bled Living Logo - Investimenti e Viaggi in Marocco" className="navbar-logo" />
-          </a>
+          </Link>
         </div>
         <div className="nav-cta" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <select 

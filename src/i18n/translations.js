@@ -14,7 +14,7 @@ export const translations = {
     },
     hero: {
       title: "Il tuo ponte per investire in Marocco.",
-      subtitle: "Opportunità immobiliari a Marrakech, viaggi esplorativi e consulenza strategica. Ti guidiamo con competenza locale ed eleganza europea.",
+      subtitle: "Opportunità immobiliari, viaggi esplorativi e consulenza strategica. Ti guidiamo con competenza locale ed eleganza europea.",
       btnConsultation: "Prenota una consulenza",
       btnWhatsapp: "WhatsApp"
     },
@@ -89,7 +89,7 @@ export const translations = {
     about: {
       title1: "Due culture, una sola missione:",
       title2: "il tuo successo.",
-      p1: "Siamo nati in Marocco ma cresciuti in Europa. Conosciamo l'esigenza di chiarezza e sicurezza degli investitori italiani, ma possediamo la rete di contatti locali indispensabile per muoversi con successo a Marrakech.",
+      p1: "Siamo due ragazzi nati in Marocco ma cresciuti in Europa. Conosciamo l'esigenza di chiarezza e sicurezza degli investitori italiani, ma possediamo la rete di contatti locali indispensabile per muoversi con successo a Marrakech.",
       p2: "Con Bled Living, abbiamo creato quello che noi stessi cercavamo: un partner di cui fidarsi ciecamente, capace di unire l'affidabilità europea all'anima vibrante del Marocco.",
       p3: "Parliamo italiano, pensiamo europeo, agiamo locale."
     },
@@ -119,7 +119,7 @@ export const translations = {
       btnConsultation: "Prenota la tua Consulenza Gratuita",
       btnWhatsapp: "Scrivici su WhatsApp",
       about: "Chi Siamo",
-      resources: "Blog e FAQ",
+      resources: "FAQ",
       rights: "Tutti i diritti riservati.",
       formTitle: "Scrivici, ti rispondiamo in 24h",
       formName: "Nome e Cognome",
@@ -157,7 +157,7 @@ export const translations = {
     },
     hero: {
       title: "Your bridge to investing in Morocco.",
-      subtitle: "Real estate opportunities in Marrakech, exploratory trips, and strategic consulting. We guide you with local expertise and European elegance.",
+      subtitle: "Real estate opportunities, exploratory trips, and strategic consulting. We guide you with local expertise and European elegance.",
       btnConsultation: "Book a Consultation",
       btnWhatsapp: "WhatsApp"
     },
@@ -232,7 +232,7 @@ export const translations = {
     about: {
       title1: "Two cultures, one mission:",
       title2: "your success.",
-      p1: "We were born in Morocco but raised in Europe. We know the need for clarity and security of international investors, but we possess the network of local contacts essential for successfully navigating Marrakech.",
+      p1: "We are two young guys born in Morocco but raised in Europe. We know the need for clarity and security of international investors, but we possess the network of local contacts essential for successfully navigating Marrakech.",
       p2: "With Bled Living, we created what we ourselves were looking for: a partner you can blindly trust, capable of combining European reliability with the vibrant soul of Morocco.",
       p3: "We think European, we act local."
     },
@@ -262,7 +262,7 @@ export const translations = {
       btnConsultation: "Book your Free Consultation",
       btnWhatsapp: "Text us on WhatsApp",
       about: "About Us",
-      resources: "Blog and FAQ",
+      resources: "FAQ",
       rights: "All rights reserved.",
       formTitle: "Write to us, we'll reply within 24h",
       formName: "Full Name",

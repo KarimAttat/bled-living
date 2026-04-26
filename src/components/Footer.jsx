@@ -200,15 +200,16 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', marginTop: '4rem', padding: '2rem 0', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.5rem' }}>
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', fontSize: '0.875rem' }}>
-            <a href="#chi-siamo" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>{t('footer', 'about')}</a>
-            <a href="#risorse" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>{t('footer', 'resources')}</a>
+            <a href="/#chi-siamo" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>{t('footer', 'about')}</a>
+            <a href="/#risorse" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>{t('footer', 'resources')}</a>
             <Link to="/blog" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>Blog</Link>
           </div>
 
           <div style={{ display: 'flex', gap: '1.25rem', fontSize: '1.2rem' }}>
-            {[FaInstagram, FaFacebookF, FaTiktok, FaXTwitter].map((Icon, i) => (
-              <a key={i} href="#" style={{ color: 'rgba(255,255,255,0.55)', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.55)'}><Icon /></a>
-            ))}
+            <a href="https://instagram.com/bladeliving" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.55)', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.55)'}><FaInstagram /></a>
+            <a href="https://facebook.com/bledliving" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.55)', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.55)'}><FaFacebookF /></a>
+            <a href="#" style={{ color: 'rgba(255,255,255,0.55)', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.55)'}><FaTiktok /></a>
+            <a href="#" style={{ color: 'rgba(255,255,255,0.55)', transition: 'color 0.3s' }} onMouseOver={e => e.currentTarget.style.color='#fff'} onMouseOut={e => e.currentTarget.style.color='rgba(255,255,255,0.55)'}><FaXTwitter /></a>
           </div>
 
           <p style={{ opacity: 0.4, fontSize: '0.75rem', margin: 0 }}>© {new Date().getFullYear()} Bled Living. {t('footer', 'rights')}</p>
