@@ -13,6 +13,7 @@ import SEO from './components/SEO'
 import { BlogList, BlogPost } from './components/Blog'
 import { PrivacyPolicy, CookiePolicy, TermsConditions } from './components/LegalPages'
 import { LanguageProvider, useLanguage } from './context/LanguageContext'
+import { Analytics } from "@vercel/analytics/react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './styles/components.css'
@@ -136,6 +137,7 @@ function App() {
         <FloatingWhatsApp />
         <FloatingLanguageSelector />
         <CookieBanner />
+        <Analytics />
       </BrowserRouter>
     </LanguageProvider>
   )
