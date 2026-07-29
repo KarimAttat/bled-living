@@ -40,7 +40,14 @@ export function optimizeImages({ maxWidth = 2000 } = {}) {
         try {
           const image = sharp(file)
           const meta = await image.metadata()
-          let pipeline = meta.width > maxWidth ? image.resize({ width: maxWidth }) : image
+          // EXIF orientation 5-8 means the stored pixels are rotated 90°/270°
+          // relative to how the photo should display (common for phone JPEGs).
+          // .rotate() with no args bakes that rotation into the pixels so the
+          // result displays correctly even after metadata is stripped below.
+          const isSideways = meta.orientation >= 5
+          const displayWidth = isSideways ? meta.height : meta.width
+          let pipeline = image.rotate()
+          if (displayWidth > maxWidth) pipeline = pipeline.resize({ width: maxWidth })
           if (ext === '.jpg' || ext === '.jpeg') {
             pipeline = pipeline.jpeg({ quality: 78, mozjpeg: true })
           } else if (ext === '.png') {
