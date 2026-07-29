@@ -88,6 +88,11 @@ export const translations = {
       btn: "Richiedi Selezione Privata",
       btnRiads: "Guarda i Riad in Vendita"
     },
+    testimonials: {
+      eyebrow: "Le loro parole",
+      title: "Chi si è già fidato di noi",
+      subtitle: "Storie vere di investitori e famiglie italiane che hanno comprato, ristrutturato o si sono trasferiti in Marocco con Bled Living."
+    },
     about: {
       title1: "Due culture, una sola missione:",
       title2: "il tuo successo.",
@@ -233,6 +238,11 @@ export const translations = {
       footerText: "Want to evaluate custom operations for your goals?",
       btn: "Request Private Selection",
       btnRiads: "See Riads for Sale"
+    },
+    testimonials: {
+      eyebrow: "In their words",
+      title: "People who already trusted us",
+      subtitle: "Real stories from Italian investors and families who bought, renovated, or relocated to Morocco with Bled Living."
     },
     about: {
       title1: "Two cultures, one mission:",

@@ -6,6 +6,7 @@ import WhyMorocco from './components/WhyMorocco'
 import Services from './components/Services'
 import TailoredTrips from './components/TailoredTrips'
 import Properties from './components/Properties'
+import Testimonials from './components/Testimonials'
 import About from './components/About'
 import BlogTeaser from './components/BlogTeaser'
 import Footer from './components/Footer'
@@ -115,6 +116,7 @@ function HomePage() {
         <Services />
         <TailoredTrips />
         <Properties />
+        <Testimonials />
         <About />
         <BlogTeaser />
       </main>
