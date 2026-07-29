@@ -22,7 +22,8 @@ export default function Navbar() {
             <img src="/logo.png?v=2" alt="Bled Living Logo - Investimenti e Viaggi in Marocco" className="navbar-logo" />
           </Link>
         </div>
-        <div className="nav-cta" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <div className="nav-cta" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <Link to="/riads" className="nav-link-riads">{t('nav', 'riads')}</Link>
           <a href="#contatti" className="btn btn-primary btn-sm">{t('nav', 'consultation')}</a>
         </div>
       </div>

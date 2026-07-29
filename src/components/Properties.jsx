@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function Properties() {
@@ -41,7 +42,12 @@ export default function Properties() {
         
         <div className="text-center" style={{ marginTop: '3rem' }} data-aos="fade-up" data-aos-delay="400">
           <p className="text-black" style={{ marginBottom: '1rem', fontWeight: '500' }}>{t('properties', 'footerText')}</p>
-          <a href="#contatti" className="btn btn-primary">{t('properties', 'btn')}</a>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link to="/riads" className="btn btn-outline-dark">
+              {t('properties', 'btnRiads')}
+            </Link>
+            <a href="#contatti" className="btn btn-primary">{t('properties', 'btn')}</a>
+          </div>
         </div>
       </div>
     </section>

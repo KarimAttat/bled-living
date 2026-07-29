@@ -46,6 +46,33 @@
   transform: scale(1.05);
 }
 
+/* Carries its own background so it stays legible whether the fixed,
+   transparent navbar sits over dark hero photography or a plain sand
+   section — no per-page color override needed. */
+.nav-link-riads {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 30px;
+  background-color: rgba(26, 39, 33, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-link-riads:hover {
+  background-color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+}
+
+@media (max-width: 640px) {
+  .nav-link-riads {
+    display: none;
+  }
+}
+
 .btn-sm {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
@@ -968,4 +995,428 @@
   .blog-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ── Riads (Collection) ───────────────────────────────────────────────────── */
+.riads-hero {
+  position: relative;
+  padding: 9rem 0 5rem;
+  color: var(--color-white);
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+
+.riads-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(24, 18, 13, 0.78) 0%, rgba(18, 13, 10, 0.93) 100%);
+  z-index: -1;
+}
+
+.riads-eyebrow {
+  color: var(--color-sand-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.riads-hero-title {
+  color: var(--color-white);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin-bottom: 0;
+}
+
+.riads-hero-subtitle {
+  max-width: 560px;
+  margin: 0 auto;
+  opacity: 0.8;
+  font-size: 1.05rem;
+}
+
+/* Warm sand grid, matching the homepage Properties showcase */
+.riads-grid-section {
+  background-color: var(--color-sand-dark);
+  color: var(--color-black);
+}
+
+.riads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.riad-card {
+  background-color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+              border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.riad-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(200, 103, 78, 0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.riad-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.riad-card-img-wrap {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+}
+
+.riad-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.riad-card:hover .riad-card-img {
+  transform: scale(1.05);
+}
+
+.riad-card-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(4px);
+}
+
+.status-available { background-color: rgba(176, 142, 102, 0.92); }
+.status-reserved   { background-color: rgba(145, 113, 75, 0.92); }
+.status-sold       { background-color: rgba(90, 90, 90, 0.85); }
+
+.riad-card-body {
+  padding: 1.75rem;
+}
+
+.riad-card-location {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--color-terracotta);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.riad-card-title {
+  color: var(--color-black);
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.riad-card-summary {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-black);
+  opacity: 0.7;
+  margin-bottom: 1.5rem;
+}
+
+.riad-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.riad-card-price {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-black);
+}
+
+.riad-card-read {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-terracotta);
+  white-space: nowrap;
+}
+
+/* Detail page */
+.riad-detail-hero {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.riad-detail-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.riad-detail-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.riad-detail-hero-title {
+  color: #fff;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  max-width: 780px;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.riad-detail-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.riad-gallery-main {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 460px;
+  cursor: zoom-in;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.riad-gallery-main-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.riad-gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.riad-gallery-thumb {
+  position: relative;
+  height: 70px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+  transition: border-color 0.25s ease, opacity 0.25s ease;
+  opacity: 0.65;
+}
+
+.riad-gallery-thumb.active,
+.riad-gallery-thumb:hover {
+  border-color: var(--color-terracotta);
+  opacity: 1;
+}
+
+.riad-gallery-thumb-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.riad-gallery-thumb-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 0.9rem;
+}
+
+.riad-info-panel {
+  position: sticky;
+  top: 100px;
+  padding-top: 0.25rem;
+}
+
+.riad-info-summary {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  opacity: 0.82;
+  margin-bottom: 1.75rem;
+}
+
+.riad-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.riad-spec-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
+.riad-spec-icon {
+  color: var(--color-terracotta);
+  font-size: 1.15rem;
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.riad-spec-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  margin-bottom: 0.2rem;
+}
+
+.riad-spec-value {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.riad-highlights {
+  margin-bottom: 1.75rem;
+}
+
+.riad-highlights li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.85rem;
+  color: var(--color-black);
+}
+
+.riad-highlights li svg {
+  color: var(--color-terracotta);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.riad-description {
+  max-width: 780px;
+  margin: 3rem auto 0;
+  font-size: 1.05rem;
+}
+
+.riad-description p {
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+  opacity: 0.88;
+}
+
+/* Lightbox */
+.riad-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 14, 11, 0.95);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.riad-lightbox-content {
+  max-width: 1100px;
+  max-height: 85vh;
+  width: 100%;
+}
+
+.riad-lightbox-media {
+  width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.riad-lightbox-close,
+.riad-lightbox-nav {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.25s ease;
+}
+
+.riad-lightbox-close:hover,
+.riad-lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.riad-lightbox-close {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.riad-lightbox-prev { left: 1.5rem; top: 50%; transform: translateY(-50%); }
+.riad-lightbox-next { right: 1.5rem; top: 50%; transform: translateY(-50%); }
+
+@media (max-width: 900px) {
+  .riad-detail-layout {
+    grid-template-columns: 1fr;
+  }
+  .riad-info-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .riads-grid {
+    grid-template-columns: 1fr;
+  }
+  .riad-gallery-main {
+    height: 300px;
+  }
+  .riad-gallery-thumbs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .riad-lightbox-prev { left: 0.5rem; }
+  .riad-lightbox-next { right: 0.5rem; }
 }

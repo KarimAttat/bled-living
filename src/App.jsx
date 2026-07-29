@@ -11,6 +11,7 @@ import BlogTeaser from './components/BlogTeaser'
 import Footer from './components/Footer'
 import SEO from './components/SEO'
 import { BlogList, BlogPost } from './components/Blog'
+import { RiadsList, RiadDetail } from './components/Riads'
 import { PrivacyPolicy, CookiePolicy, TermsConditions } from './components/LegalPages'
 import { LanguageProvider, useLanguage } from './context/LanguageContext'
 import { Analytics } from "@vercel/analytics/react"
@@ -130,6 +131,8 @@ function App() {
           <Route path="/"          element={<HomePage />} />
           <Route path="/blog"      element={<BlogList />} />
           <Route path="/blog/:id"  element={<BlogPost />} />
+          <Route path="/riads"     element={<RiadsList />} />
+          <Route path="/riads/:id" element={<RiadDetail />} />
           <Route path="/privacy"   element={<PrivacyPolicy />} />
           <Route path="/cookies"   element={<CookiePolicy />} />
           <Route path="/terms"     element={<TermsConditions />} />

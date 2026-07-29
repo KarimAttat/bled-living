@@ -10,6 +10,7 @@ export const translations = {
       opportunities: "Opportunità",
       about: "Chi Siamo",
       faq: "FAQ",
+      riads: "Riad in Vendita",
       consultation: "Parla con noi"
     },
     hero: {
@@ -84,7 +85,8 @@ export const translations = {
       c3Title: "Ville Esclusive nei Dintorni",
       c3Desc: "Asset di altissimo pregio per rifugi privati o locazioni luxury. Architettura mozzafiato, ampi spazi e tranquillità assoluta a pochi minuti dal caos cittadino.",
       footerText: "Vuoi valutare operazioni su misura per i tuoi obiettivi?",
-      btn: "Richiedi Selezione Privata"
+      btn: "Richiedi Selezione Privata",
+      btnRiads: "Guarda i Riad in Vendita"
     },
     about: {
       title1: "Due culture, una sola missione:",
@@ -120,6 +122,7 @@ export const translations = {
       btnWhatsapp: "Scrivici su WhatsApp",
       about: "Chi Siamo",
       resources: "FAQ",
+      riads: "Riad in Vendita",
       rights: "Tutti i diritti riservati.",
       formTitle: "Scrivici, ti rispondiamo in 24h",
       formName: "Nome e Cognome",
@@ -153,6 +156,7 @@ export const translations = {
       opportunities: "Opportunities",
       about: "About Us",
       faq: "FAQ",
+      riads: "Riads for Sale",
       consultation: "Let's Talk"
     },
     hero: {
@@ -227,7 +231,8 @@ export const translations = {
       c3Title: "Exclusive Villas in the Surroundings",
       c3Desc: "High-end assets for private retreats or luxury rentals. Breathtaking architecture, large spaces, and absolute tranquility just minutes away from the city chaos.",
       footerText: "Want to evaluate custom operations for your goals?",
-      btn: "Request Private Selection"
+      btn: "Request Private Selection",
+      btnRiads: "See Riads for Sale"
     },
     about: {
       title1: "Two cultures, one mission:",
@@ -263,6 +268,7 @@ export const translations = {
       btnWhatsapp: "Text us on WhatsApp",
       about: "About Us",
       resources: "FAQ",
+      riads: "Riads for Sale",
       rights: "All rights reserved.",
       formTitle: "Write to us, we'll reply within 24h",
       formName: "Full Name",

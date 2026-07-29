@@ -203,6 +203,7 @@ export default function Footer() {
             <a href="/#chi-siamo" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>{t('footer', 'about')}</a>
             <a href="/#risorse" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>{t('footer', 'resources')}</a>
             <Link to="/blog" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>Blog</Link>
+            <Link to="/riads" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>{t('footer', 'riads')}</Link>
             <Link to="/privacy" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>Privacy Policy</Link>
             <Link to="/cookies" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>Cookie Policy</Link>
             <Link to="/terms" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none', transition: 'color 0.3s' }} onMouseOver={e => e.target.style.color='#fff'} onMouseOut={e => e.target.style.color='rgba(255,255,255,0.6)'}>Terms & Conditions</Link>
@@ -216,7 +217,7 @@ export default function Footer() {
               <FaPhone /> +39 340 277 8699
             </a>
             <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-              <FaLocationDot /> Guéliz, Marrakech
+              <FaLocationDot /> Rue Darl El Bacha, Marrakech, Morocco
             </span>
           </div>
 
